@@ -1,5 +1,5 @@
 # Zimbra webshell scan
-## Authoer: NCSC-NL CTI & IROn
+## Author: NCSC-NL CTI & IROn
 
 ### Disclaimer
 **English:** This script is provided without any guarantees regarding its effectiveness. Always ensure your system is up-to-date and adhere to security recommendations provided by the software provider. The detection capabilities of this script are based on a limited set of product versions. Make sure no sensitive information is disclosed when sharing the output of this script.
