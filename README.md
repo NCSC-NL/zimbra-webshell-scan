@@ -21,7 +21,7 @@ This script is based on clean set-ups of Zimbra version 8.8.15_GA, 9.0.0_GA en 1
 #### Usage
 1. **Download the script:**
 - Visit the GitHub Repository at `https://github.com/NCSC-NL/zimbra-webshell-scan`
-- Download the script as is, or copy the script and save it as "find_zimbra_webshell.sh", on the system that is running Zimbra.
+- Download the script as is and save it on the system that is running Zimbra.
 
 2. **Prepare the script:** 
 - Make the script executable by using the following command: ```~: chmod +x find_zimbra_webshell.sh```
@@ -32,8 +32,9 @@ This script is based on clean set-ups of Zimbra version 8.8.15_GA, 9.0.0_GA en 1
 #### Reading the results
 - The script will only return an output if it has found mismatch(es) between the default folders/files vs. on your system. If the script is finished running and there are no folder paths displayed, no mismatch was found.
 - In the event of discovering unknown files, it might indicate that there is a webshell active on your system. To verify this, you could search these files to find specific keywords, such as:
-	*"JCMD"
-	*"JACTION"
+	* "JCMD"
+	* "JACTION"
+
 The webshell is known to use these cookies, containing base64-encoded commands that can be executed.
 
 #### Troubleshooting
@@ -43,11 +44,11 @@ Optionally, you can perform a manual analysis in the public folders.
 Look in the public folders for files you do not recognize or aren't in the default configuration of Zimbra.
 
 #### What if files are found by using the script?
-1. **Verification**
+1. **Verification:**
 Double check if the files are truly unknown to you. 
-2. **Containment**
+2. **Containment:**
 In case you do not recognize them or aren't sure, and they contain elements of the webshell, we advise making a snapshot or copy with memory of the system and isolating it. Do not turn off the system nor remove files yourself.
-3. **Contact**
+3. **Contact:**
 If you are a constituant of NCSC-NL, please reach out to us directly. For other cases, we advise to reach out to your national, sectoral or commercial CERT.
 
 #### Additional information
@@ -59,7 +60,7 @@ For more detailed information about the webshell, we kindly refer you to:
 ### NL Instructies
 
 **Beschrijving**
-Dit script zoekt naar bestanden die niet standaard in de public folders van Zimbra web server applicatie horen te staan. Dit wordt gedaan aan de hand van een ```find``` command, en met ```grep -v``` worden de standaard folders uitgesloten. Het kan zijn dat de webshell dezelfde timestamps of naam heeft als andere standaard bestanden, dit is de reden dat we in het script kijken naar de volledige filepaths. 
+Deze repository bevat een script die gebruikt kan worden om te scannen op Zimbra een webshell [CVE-2024-45519](https://nvd.nist.gov/vuln/detail/CVE-2024-45519) op een systeem. Het script zoekt naar bestanden die niet in de default public folders van Zimbra's webserver applicatie staan. Dit wordt gedaan aan de hand van een ```find``` command, en met ```grep -v``` worden de standaard folders uitgesloten. Het kan zijn dat de webshell dezelfde timestamps of naam heeft als andere standaard bestanden, dit is de reden dat we in het script kijken naar de volledige filepaths. 
 
 Dit script is gebasseerd op clean set-ups van Zimbra versie 8.8.15_GA, 9.0.0_GA en 10.1.0_GA. 
 
@@ -92,11 +93,11 @@ Als het script niet goed werkt, is het mogelijk dat het script niet compatible i
 Optioneel, kun je ook handmatig analyse uitvoeren in de /public/ folders en zoeken naar bestanden die niet tot de standaard configuratie van Zimbra behoren. Let hierbij goed op de volledige file paths. 
 
 #### Wat als er onbekende bestanden zijn gevonden?
-1. **Verificatie**
- Ga eerst na of je deze bestanden zelf herkent. 
-2. **Isolatie**
+1. **Verificatie:**
+Ga eerst na of je deze bestanden zelf herkent.
+2. **Isolatie:**
 Indien je ze niet herkent, en het bevat elementen van de webshell, raden we aan om een snapshot of kopie met memory te maken van het systeem. Zet het systeem niet uit en verwijder niet zelf bestanden. 
-3. **Contact**
+3. **Contact:**
 Indien jouw organisatie doelgroep is van het NCSC-NL, neem direct contact met ons op. In alle andere gevallen, raden we aan om contact op te nemen met een sectorale of commerciele CERT.
 
 #### Extra informatie
