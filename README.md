@@ -10,7 +10,9 @@
 ### GB Instructions
 
 **Description**
-This repository contains a script to scan for Zimbra webshell [CVE-2024-45519](https://nvd.nist.gov/vuln/detail/CVE-2024-45519) on your system. The script looks for files that should not be in the default public folders of Zimbra's websever application. This happens with a ```find``` command and with ```grep -v``` the default folders are excluded. The webshell can be found in a file, that is not in the default folder path. It is possible that this malicious file has the same timestamp or name as other legit files, which is why we search for full folder paths, instead of just names. 
+This repository provides a script designed to detect a Zimbra webshell on your system. Developed by NCSC-NL in response to [CVE-2024-45519](https://nvd.nist.gov/vuln/detail/CVE-2024-45519), this script may also identify other security issues not directly associated with this specific vulnerability.
+
+The script looks for files that should not be in the default public folders of Zimbra's websever application. This happens with a ```find``` command and with ```grep -v``` the default folders are excluded. The webshell can be found in a file, that is not in the default folder path. It is possible that this malicious file has the same timestamp or name as other legit files, which is why we search for full folder paths, instead of just names. 
 
 This script is based on clean set-ups of Zimbra version 8.8.15_GA, 9.0.0_GA en 10.1.0_GA.
 
@@ -60,9 +62,11 @@ For more detailed information about the webshell, we kindly refer you to:
 ### NL Instructies
 
 **Beschrijving**
-Deze repository bevat een script die gebruikt kan worden om te scannen op Zimbra een webshell [CVE-2024-45519](https://nvd.nist.gov/vuln/detail/CVE-2024-45519) op een systeem. Het script zoekt naar bestanden die niet in de default public folders van Zimbra's webserver applicatie staan. Dit wordt gedaan aan de hand van een ```find``` command, en met ```grep -v``` worden de standaard folders uitgesloten. Het kan zijn dat de webshell dezelfde timestamps of naam heeft als andere standaard bestanden, dit is de reden dat we in het script kijken naar de volledige filepaths. 
+Deze repository bevat een script voor het scannen van uw systeem op de Zimbra webshell. Dit script is ontwikkeld door NCSC-NL naar aanleiding van [CVE-2024-45519](https://nvd.nist.gov/vuln/detail/CVE-2024-45519). Het is echter mogelijk dat het script ook andere bevindingen oplevert die niet (direct) gerelateerd zijn aan deze specifieke CVE.
 
-Dit script is gebasseerd op clean set-ups van Zimbra versie 8.8.15_GA, 9.0.0_GA en 10.1.0_GA. 
+Het script zoekt naar bestanden die niet in de default public folders van Zimbra's webserver applicatie staan. Dit wordt gedaan aan de hand van een ```find``` command, en met ```grep -v``` worden de standaard folders uitgesloten. Het kan zijn dat de webshell dezelfde timestamps of naam heeft als andere standaard bestanden, dit is de reden dat we in het script kijken naar de volledige filepaths. 
+
+Dit script is gebasseerd op clean set-ups van Zimbra versie 8.8.15_GA, 9.0.0_GA en 10.1.0_GA.  
 
 #### Benodigdheden
 - Een Linux systeem met Zimbra versie 8.8.15 or 9.0.0 of 10.1.0
